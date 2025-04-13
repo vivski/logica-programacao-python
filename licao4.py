@@ -78,18 +78,18 @@ if bolsaf == "s" and filhos == "s":
 # entrada na loja, àqueles que estão com a anuidade de associação 
 # em dia ou pagar o valor de 25 reais na entrada.
 
-anuidade = input("você está com a anuidade em dia?")
+anuidade = input("Você está com a anuidade em dia? (sim ou não): ")
 
-if(anuidade == "sim"):
-    print("entrada permitida!")
-elif(anuidade == "não"):
-    pagaranuidade = "deseja pagar a entrada agora?"
-    print("")
-    if(pagaranuidade == "sim"):
-        pagamento = int(input("insira o valor"))
-        if(pagamento >= 25):
-            print("entrada permitida!")
+if anuidade == "sim":
+    print("Entrada permitida!")
+else:
+    pagaranuidade = input("Deseja pagar a entrada agora? (sim ou não): ")
+    if pagaranuidade == "sim":
+        pagamento = int(input("Insira o valor: "))
+        if pagamento >= 25:
+            print("Entrada permitida!")
+        else:
+            print("Valor insuficiente. Entrada negada!")
     else:
-        print("entrada negada!")
-
+        print("Entrada negada!")
 
